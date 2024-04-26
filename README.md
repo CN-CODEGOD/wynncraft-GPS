@@ -49,18 +49,16 @@ find the near farm
 
 
 you can add
--farm
-
--fishing 
-
--mine
-
--blacksmith 
-
--scroll Merchant 
-
--potion Merchant
-
--tool Merchant
-
+             -Potion Merchant
+                        -BlackSmith
+                        -Scroll Merchant
+                        -Farm
+                        -Fishing
+                        -tool Merchant
+                        -cave
+                        -mine
+                        -Identifier
+                        -Bank
+                        -chest
+                        -powder master
 
