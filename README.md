@@ -1,6 +1,6 @@
-# wynncraft-coornate-finder
+# wynncraft-GPS
 
-coornate finder for wynncraft
+wynncraft GPS for map coordinate
 
 
 ## calc 
