@@ -50,11 +50,17 @@ find the near farm
 
 you can add
 -farm
+
 -fishing 
+
 -mine
+
 -blacksmith 
+
 -scroll Merchant 
+
 -potion Merchant
+
 -tool Merchant
 
 
