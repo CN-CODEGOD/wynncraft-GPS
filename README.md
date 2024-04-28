@@ -56,7 +56,7 @@ function MyArgumentCompleter{
 
 ![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/8e2b5064-c5fe-4d30-918e-82e227af6162)
 
-usage: 
+### usage: 
 
 find the  near place around you by passing x,y,z 
 
@@ -65,7 +65,7 @@ find the  near place around you by passing x,y,z
 
 ![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/0bacaecb-257d-4d89-bc5e-af9714b77a34)
 
-usage: 
+### usage: 
 
 add the new place for the script,will add the type will be the [type] of new adding place
 
@@ -73,7 +73,7 @@ add the new place for the script,will add the type will be the [type] of new add
 
    ![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/d6105105-41ef-46e0-a36b-826db714dd5b)
 
-   usage :
+   ### usage :
 
    remove the places adding to your script by passing the id 
 
@@ -84,7 +84,7 @@ add the new place for the script,will add the type will be the [type] of new add
 ![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/1bbe5c9a-812f-415a-9ff5-dd56d87d541a)
 
    
-usage :
+### usage :
 
 calc the nearest town between town and your destination by passing xyz
 
