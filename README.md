@@ -2,63 +2,90 @@
 
 wynncraft GPS for map coordinate
 
+## install 
+wyyncraft-GPS
 
-## calc 
+follow the instruct before running the script 
 
-map.ps1 find town
+1. 
 
-calc the nearest town from your destination
+move the place.xml AND map.xml to the folder to C:\USERS\(USERNAME)
 
-![image](https://github.com/CN-CODEGOD/wynncraft-coornate-finder/assets/166476136/44efaa51-b2a5-46ec-8204-6b7f727e6e70)
+2.
 
-## find 
-map.ps1 find place 
+run
 
-![image](https://github.com/CN-CODEGOD/wynncraft-coornate-finder/assets/166476136/a0ca4fa2-39b8-415a-96f8-919a1fc14769)
+```
+start $profile in powershell
+```
+
+copy the completer function to your profile.ps1
+
+```
+# <auto argument completers for GPS>
+function MyArgumentCompleter{
+    param ( $commandName,
+            $parameterName,
+            $wordToComplete,
+            $commandAst,
+            $fakeBoundParameters )
+
+    $possibleValues = @{
+        find = @("'potion merchant'",'blackSmith',"'scroll merchant'",'farm','fishing',"'tool merchant'",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone')
+        remove = @()
+        add = @("'potion merchant'",'blackSmith',"'scroll merchant'",'farm','fishing',"'tool merchant'",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone')
+    }
+
+    if ($fakeBoundParameters.ContainsKey('action')) {
+        $possibleValues[$fakeBoundParameters.action] | Where-Object {
+            $_ -like "$wordToComplete*"
+        }
+    } else {
+        $possibleValues.Values | ForEach-Object {$_}
+    }
+}
+
+````
+			
+
+## arguments 
+
+1.gps.ps1 find [type]
 
 
-## add
 
-adding town coornate and Name for finder to calc 
+![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/8e2b5064-c5fe-4d30-918e-82e227af6162)
 
-map.ps1 add town
+usage: 
 
-![image](https://github.com/CN-CODEGOD/wynncraft-coornate-finder/assets/166476136/5e699820-301a-4688-905f-dab3b476dd6f)
-
-
-adding place coornate and type for finder to find 
-
-map.ps1 add place 
-
-![image](https://github.com/CN-CODEGOD/wynncraft-coornate-finder/assets/166476136/f4956e6a-cd65-460b-ae12-c0c67b115c97)
+find the  near place around you by passing x,y,z 
 
 
-## exmaple
-find the nearest town for destionation
+2.gps add [type] 
 
-![image](https://github.com/CN-CODEGOD/wynncraft-coornate-finder/assets/166476136/d2bf6649-6d13-4719-a632-837f5f2b72a9)
+![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/0bacaecb-257d-4d89-bc5e-af9714b77a34)
+
+usage: 
+
+add the new place for the script,will add the type will be the [type] of new adding place
+
+3. gps remove
+
+   ![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/d6105105-41ef-46e0-a36b-826db714dd5b)
+
+   usage :
+
+   remove the places adding to your script by passing the id 
 
 
-adding new farm place to finder 
-![image](https://github.com/CN-CODEGOD/wynncraft-coornate-finder/assets/166476136/f98b709f-c31f-42a9-bee7-e110f54e7748)
-
-find the near farm 
-
-![image](https://github.com/CN-CODEGOD/wynncraft-coornate-finder/assets/166476136/696ef226-e513-462f-a40e-c505993ae281)
+4. gps calc
 
 
+![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/1bbe5c9a-812f-415a-9ff5-dd56d87d541a)
 
-you can add
-             -Potion Merchant
-                        -BlackSmith
-                        -Scroll Merchant
-                        -Farm
-                        -Fishing
-                        -tool Merchant
-                        -cave
-                        -mine
-                        -Identifier
-                        -Bank
-                        -chest
-                        -powder master
+   
+usage :
+
+calc the nearest town between town and your destination by passing xyz
+
 
