@@ -30,21 +30,30 @@ function MyArgumentCompleter{
             $commandAst,
             $fakeBoundParameters )
 
-    $possibleValues = @{
-        find = @("'potion merchant'",'blackSmith',"'scroll merchant'",'farm','fishing',"'tool merchant'",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone')
-        remove = @()
-        add = @("'potion merchant'",'blackSmith',"'scroll merchant'",'farm','fishing',"'tool merchant'",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone')
-    }
+            $possibleValues = @{
+                find = @("potion merchant",'blackSmith',"scroll merchant",'farm','fishing',"tool merchant",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone','boat')
+                remove = @()
+                add = @('potion merchant','blackSmith',"scroll merchant",'farm','fishing',"tool merchant",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone','boat')    }
 
     if ($fakeBoundParameters.ContainsKey('action')) {
         $possibleValues[$fakeBoundParameters.action] | Where-Object {
             $_ -like "$wordToComplete*"
-        }
-    } else {
-        $possibleValues.Values | ForEach-Object {$_}
+        }|foreach-object {"'$_'"}
     }
-}
 
+  else {
+
+    $possibleValues.Values | ForEach-Object {$_}
+
+
+
+
+
+
+
+
+  }
+}
 ````
 			
 
@@ -88,4 +97,7 @@ add the new place for the script,will add the type will be the [type] of new add
 
 calc the nearest town between town and your destination by passing xyz
 
+
+## avaliable type 
+'potion merchant','blackSmith',"scroll merchant",'farm','fishing',"tool merchant",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone','boat'
 
