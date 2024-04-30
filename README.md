@@ -72,7 +72,11 @@ find the  near place around you by passing x,y,z
 
 2.gps add [type] 
 
+
+
 ![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/0bacaecb-257d-4d89-bc5e-af9714b77a34)
+
+gps add [type] -force
 
 ### usage: 
 
