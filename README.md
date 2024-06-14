@@ -3,105 +3,21 @@
 wynncraft GPS for map coordinate
 
 ## install 
-wyyncraft-GPS
+move .\gps  $pshome\modules
+md c:\ex-sys
+move .\xml c:\ex-sys
 
-follow the instruct before running the script 
+# sync:
+add-place -wynncraft_place ;-teleportation_place; -survival_place ;-road
 
-1. 
+find-place -wynncraft_place -mycoordinate;-teleportation_place -mycoordinate;-survival_place -mycoordinate;-road
 
-move the place.xml AND map.xml to the folder to C:\USERS\(USERNAME)
+road -mycoordinate
 
-2.
+teleportation-route -destination
 
-run
+road-route  -destination -dimention
 
-```
-start $profile in powershell
-```
-
-copy the completer function to your profile.ps1
-
-```
-# <auto argument completers for GPS>
-function MyArgumentCompleter{
-    param ( $commandName,
-            $parameterName,
-            $wordToComplete,
-            $commandAst,
-            $fakeBoundParameters )
-
-            $possibleValues = @{
-                find = @("potion merchant",'blackSmith',"scroll merchant",'farm','fishing',"tool merchant",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone','boat')
-                remove = @()
-                add = @('potion merchant','blackSmith',"scroll merchant",'farm','fishing',"tool merchant",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone','boat')    }
-
-    if ($fakeBoundParameters.ContainsKey('action')) {
-        $possibleValues[$fakeBoundParameters.action] | Where-Object {
-            $_ -like "$wordToComplete*"
-        }|foreach-object {"'$_'"}
-    }
-
-  else {
-
-    $possibleValues.Values | ForEach-Object {$_}
-
-
-
-
-
-
-
-
-  }
-}
-````
-			
-
-## arguments 
-
-1.gps.ps1 find [type]
-
-
-
-![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/8e2b5064-c5fe-4d30-918e-82e227af6162)
-
-### usage: 
-
-find the  near place around you by passing x,y,z 
-
-
-2.gps add [type] 
-
-
-
-![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/0bacaecb-257d-4d89-bc5e-af9714b77a34)
-
-gps add [type] -force
-
-### usage: 
-
-add the new place for the script,will add the type will be the [type] of new adding place
-
-3. gps remove
-
-   ![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/d6105105-41ef-46e0-a36b-826db714dd5b)
-
-   ### usage :
-
-   remove the places adding to your script by passing the id 
-
-
-4. gps calc
-
-
-![image](https://github.com/CN-CODEGOD/wynncraft-GPS/assets/166476136/1bbe5c9a-812f-415a-9ff5-dd56d87d541a)
-
-   
-### usage :
-
-calc the nearest town between town and your destination by passing xyz
-
-
-## avaliable type 
-'potion merchant','blackSmith',"scroll merchant",'farm','fishing',"tool merchant",'cave','mine','identifier','bank','chest','powder master','housing','gold','iron','redstone','boat'
-
+search-place -wynncraft_place -mycoordinate;-teleportation_place -mycoordinate;-survival_place -mycoordinate;-road
+# help 
+get-help -name [name]
