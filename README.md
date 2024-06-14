@@ -1,6 +1,6 @@
-# wynncraft-GPS
+# minecraft-GPS
 
-wynncraft GPS for map coordinate
+Powershell base map gps module for minecraft 
 
 ## install 
 move .\gps  $pshome\modules
