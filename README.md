@@ -16,7 +16,7 @@ The all posible raod for the road-route
 
 It is a all linked graph which each vertices link to another
 
-In road-route all the edges for the graph is dircted and the start with mycoordinate
+In road-route all the edges for the start is dircted and others are undirected , start with mycoordinate,we search to every road, and start to search between roads and find the shortest distance
 
 
 Each verchies represent the raods we add.when searach we calc each road for the best distance
